@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Košík | Noodle Hub</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a class="brand" href="index.html">
+                <i class="icon icon-bowl"></i> NOODLE HUB
+            </a>
+            <div class="nav-links">
+                <a href="index.html">Domů</a>
+                <a href="products.html">Produkty</a>
+                <a href="cart.html" class="cart-link active">
+                    <i class="icon icon-cart"></i>
+                    <span class="cart-badge" id="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Cart Content -->
+    <div class="container py-5">
+        <h1 class="mb-5 fw-bold">Váš košík</h1>
+
+        <div class="cart-layout" id="cart-container">
+            <!-- Items -->
+            <div class="cart-items" id="cart-items-list">
+                <!-- JS will populate this -->
+                <div class="empty-cart text-muted">
+                    <i class="icon icon-cart" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+                    <h3>Váš košík je prázdný</h3>
+                    <a href="products.html" class="btn btn-primary mt-4">Začít nakupovat</a>
+                </div>
+            </div>
+
+            <!-- Summary -->
+            <div class="cart-summary" id="cart-summary-box" style="display: none;">
+                <h3 class="mb-4">Shrnutí objednávky</h3>
+                <div class="summary-row">
+                    <span class="text-muted">Mezisoučet</span>
+                    <span id="cart-subtotal">0 Kč</span>
+                </div>
+                <div class="summary-row">
+                    <span class="text-muted">Doprava</span>
+                    <span class="text-primary">Zdarma</span>
+                </div>
+                <div class="summary-row summary-total">
+                    <span>Celkem</span>
+                    <span class="text-primary" id="cart-total">0 Kč</span>
+                </div>
+                <button class="btn btn-primary btn-block mt-4" id="checkout-btn">
+                    POKRAČOVAT K POKLADNĚ
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p class="text-muted small">&copy; 2026 Noodle Hub. Všechna práva vyhrazena.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
