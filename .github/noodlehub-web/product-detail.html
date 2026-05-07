@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buldak Carbonara | Noodle Hub</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a class="brand" href="index.html">
+                <i class="icon icon-bowl"></i> NOODLE HUB
+            </a>
+            <div class="nav-links">
+                <a href="index.html">Domů</a>
+                <a href="products.html">Produkty</a>
+                <a href="cart.html" class="cart-link">
+                    <i class="icon icon-cart"></i>
+                    <span class="cart-badge" id="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-5">
+        <div class="mb-4">
+            <a href="products.html" class="text-muted">&larr; Zpět na produkty</a>
+        </div>
+
+        <div id="dynamic-product-detail" class="product-detail animate-up">
+            <!-- Content will be injected by main.js based on ?id= parameter -->
+            <div style="text-align: center; padding: 5rem; grid-column: 1 / -1;">
+                <h2>Načítání produktu...</h2>
+            </div>
+        </div>
+
+        <div class="mt-5 pt-5" style="border-top: 1px solid var(--glass-border);">
+            <h3 class="mb-4">Recenze zákazníků</h3>
+            <div class="feature-box text-left" style="text-align: left; max-width: 600px;">
+                <div class="d-flex justify-content-between mb-2">
+                    <h5 class="mb-0">Pavel N.</h5>
+                    <span class="text-muted small">včera</span>
+                </div>
+                <div class="text-accent-orange small mb-2">
+                    <i class="icon icon-star"></i><i class="icon icon-star"></i><i class="icon icon-star"></i><i class="icon icon-star"></i><i class="icon icon-star"></i>
+                </div>
+                <p class="mb-0 text-muted">Nejlepší verze Buldaku. Není to takový extrém a ta smetanová chuť je boží!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p class="text-muted small">&copy; 2026 Noodle Hub. Všechna práva vyhrazena.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
