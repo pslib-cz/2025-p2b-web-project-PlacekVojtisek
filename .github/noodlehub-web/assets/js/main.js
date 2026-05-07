@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    
+
     // --- Product Database ---
     const products = [
         { id: '1', brand: 'Samyang', title: 'Buldak Original', price: 149, img: 'https://samyangamerica.com/images/products/buldak-multi-original.png', heat: '4/10', origin: 'Jižní Korea', time: '5 min', categories: ['hot', 'fried'], desc: 'Legendární pálivé nudle s příchutí kuřete. Klasika, která to všechno začala.' },
@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('detail-add-to-cart').addEventListener('click', (e) => {
             const qty = parseInt(document.getElementById('detail-qty').value) || 1;
             addToCart({ ...product, qty });
-            
+
             const btn = e.currentTarget;
             const originalText = btn.innerHTML;
             btn.innerHTML = 'Přidáno do košíku!';
@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 1500);
         });
     };
-    
+
     // Call render detail if on detail page
     renderProductDetail();
 
@@ -141,14 +141,14 @@ document.addEventListener('DOMContentLoaded', () => {
                         img: button.dataset.img,
                         qty: qty
                     };
-                    
+
                     addToCart(product);
-                    
+
                     const originalText = button.innerHTML;
                     button.innerHTML = '<i class="icon icon-cart"></i>';
                     button.style.backgroundColor = '#28a745';
                     button.style.color = 'white';
-                    
+
                     setTimeout(() => {
                         button.innerHTML = originalText;
                         button.style.backgroundColor = '';
@@ -178,7 +178,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const refreshGrid = () => {
                 let filtered = [...products];
-                
+
                 if (currentCategory !== 'all') {
                     filtered = filtered.filter(p => p.categories && p.categories.includes(currentCategory));
                 }
@@ -198,7 +198,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 } else {
                     gridContainer.innerHTML = filtered.map(p => generateHTML(p)).join('');
                 }
-                
+
                 attachCartListeners();
 
                 // Update active state on buttons
@@ -246,7 +246,7 @@ document.addEventListener('DOMContentLoaded', () => {
     renderProductGrid();
 
     // --- Cart State Management ---
-    
+
     const getCart = () => {
         const cart = localStorage.getItem('noodlehub_cart');
         return cart ? JSON.parse(cart) : [];
@@ -273,7 +273,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const addToCart = (product) => {
         const cart = getCart();
         const existing = cart.find(item => item.id === product.id);
-        
+
         if (existing) {
             existing.qty += product.qty;
         } else {
@@ -293,11 +293,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const renderCart = () => {
         const cartList = document.getElementById('cart-items-list');
         const summaryBox = document.getElementById('cart-summary-box');
-        
+
         if (!cartList) return; // Not on cart page
 
         const cart = getCart();
-        
+
         if (cart.length === 0) {
             cartList.innerHTML = `
                 <div class="empty-cart text-muted">
@@ -319,7 +319,7 @@ document.addEventListener('DOMContentLoaded', () => {
         cart.forEach(item => {
             const itemTotal = item.price * item.qty;
             total += itemTotal;
-            
+
             html += `
                 <div class="cart-item animate-up">
                     <img src="${item.img}" alt="${item.title}" class="cart-item-img">
@@ -344,7 +344,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const subtotalEl = document.getElementById('cart-subtotal');
         const totalEl = document.getElementById('cart-total');
-        
+
         if (subtotalEl) subtotalEl.textContent = `${total} Kč`;
         if (totalEl) totalEl.textContent = `${total} Kč`;
     };
