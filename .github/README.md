@@ -1,4 +1,5 @@
 🍜 Noodle Hub
+odkaz na github pages https://pslib-cz.github.io/2025-p2b-web-project-PlacekVojtisek/
 Prémiový český e-shop specializovaný na asijské instantní nudle — především korejské Samyang Buldak a další asijské speciality.
 
 O projektu
