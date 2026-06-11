@@ -42,7 +42,7 @@ about.html — O nás ⚠️
 
 Stránka s příběhem Noodle Hubu a 3 statistikami (150+ druhů nudlí, 5k+ zákazníků, 24h doručení). Pozor: tato stránka není dostupná přes navigaci — chybí odkaz v navbaru.
 
-Produktová databáze
+Produktová databáze.
 10 produktů hardcoded v main.js:
 #NázevZnačkaCenaPálivostPůvod1Buldak 
 OriginalSamyang149 Kč4/10Jižní Korea2Buldak
